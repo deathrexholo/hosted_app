@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a0e17;
+  --color-secondary: #111625;
+  --color-accent: #d4af37;
+  --color-accent-hover: #f9d76e;
+  --color-glass: rgba(255, 255, 255, 0.05);
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --shadow-glow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .rotate-y-12 {
+    transform: rotateY(12deg);
+  }
+
+  .rotate-y-0 {
+    transform: rotateY(0deg);
+  }
+}
+
+/* Custom Base Styles */
+body {
+  @apply bg-primary text-gray-100 font-sans antialiased;
+}
+
+.btn-primary {
+  @apply bg-accent text-primary px-6 py-3 font-semibold rounded uppercase tracking-wider transition-all duration-200 hover:-translate-y-0.5 hover:shadow-glow hover:bg-accent-hover;
+}
+
+.btn-outline {
+  @apply bg-transparent border border-accent text-accent px-6 py-3 font-semibold rounded uppercase tracking-wider transition-all duration-200 hover:bg-accent/10 hover:shadow-glow;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-800 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
