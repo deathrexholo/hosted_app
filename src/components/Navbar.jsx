@@ -19,7 +19,7 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', path: '/' },
+        { name: 'Home', path: '/library' },
         { name: 'Shop', path: '/shop' },
         { name: 'New Releases', path: '/new-releases' },
         { name: 'Sell', path: '/sell' },
@@ -32,7 +32,7 @@ const Navbar = () => {
         >
             <div className="container mx-auto flex items-center justify-between">
                 {/* Logo */}
-                <Link to="/" className="text-2xl font-bold font-serif tracking-wider text-white">
+                <Link to="/library" className="text-2xl font-bold font-serif tracking-wider text-white">
                     LUMINA<span className="text-accent">.</span>BOOKS
                 </Link>
 
